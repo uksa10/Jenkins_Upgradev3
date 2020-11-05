@@ -8,7 +8,7 @@ pipeline {
             post {
                 success {
                     echo "Now Archiving the Artifacts...."
-                   dir('java-tomcat-sample-docker /') {
+                   dir('java-tomcat-sample-docker/') {
    archiveArtifacts artifacts: '**/*.war'
 }
                  
