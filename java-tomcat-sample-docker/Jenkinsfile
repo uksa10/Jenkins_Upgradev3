@@ -20,7 +20,7 @@ pipeline {
             steps {
              
                 bat "docker build ./java-tomcat-sample-docker -t tomcatsamplewebapp:${env.BUILD_ID}"
-                bat sleep(10)
+                timeout /t 30
             }
         }
 
